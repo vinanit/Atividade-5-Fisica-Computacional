@@ -5,7 +5,7 @@ from scipy.linalg import eigh_tridiagonal
 
 # Parâmetros
 N = 100  # Tamanho da cadeia
-defect_fraction = 0  # Fração de defeitos
+defect_fraction = 0 # Fração de defeitos
 m = 1.0
 k = 1.0
 
@@ -34,6 +34,8 @@ eigenvals, eigenvecs = eigh_tridiagonal(main_diag, off_diag)
 mode_index = 99
 omega = np.sqrt(eigenvals[mode_index])
 mode_vector = eigenvecs[:, mode_index]
+
+
 
 # Configurar animação
 fig, ax = plt.subplots(figsize=(12, 6))
@@ -66,6 +68,7 @@ def animate(t):
     line.set_data(np.arange(N), displacements)
     time_text.set_text(f'Tempo: {t:.2f} s')
     return line, time_text
+
 
 # Criar animação
 ani = FuncAnimation(
