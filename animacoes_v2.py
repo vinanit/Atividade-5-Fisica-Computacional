@@ -3,6 +3,8 @@ import matplotlib.pyplot as plt
 from matplotlib.animation import FuncAnimation
 from scipy.linalg import eigh_tridiagonal
 
+# Função usada para gerar o grafico estático do modo 0 (translação global)
+
 # Parâmetros
 N = 100
 defect_fraction = 0.05
